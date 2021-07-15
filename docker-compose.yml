@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: eif-postgres
+    image: postgres
+    volumes:
+      - ./docker/data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=eif
+      - POSTGRES_USER=eifroot
+      - POSTGRES_PASSWORD=eifpassword!@
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+    ports:
+      - "5432:5432"
+
+  api:
+    container_name: eif-api
+    build:
+      context: ""
+      dockerfile: Dockerfile
+    ports:
+      - "8686:9999"
+    volumes:
+      - ./:/app/
+    environment:
+      - POSTGRES_DB=eif
+      - POSTGRES_USER=eifroot
+      - POSTGRES_PASSWORD=eifpassword
+      - POSTGRES_HOST=eif-postgres
+      - POSTGRES_PORT=5432
