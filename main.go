@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi/core"
 	"github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi/src"
@@ -18,7 +17,7 @@ type User struct {
 func main() {
 	router := mux.NewRouter()
 	router.NotFoundHandler = core.NotFoundHandler("Main")
-	router.HandleFunc("/", handler)
+	// router.HandleFunc("/", handler)
 	err := src.ListenAndServe(":9999", router)
 	if err != nil {
 		log.Fatal("Error On Server")
@@ -26,6 +25,7 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	/*
 	gorm := core.PostgresConnect()
 
 	gorm.AutoMigrate(&User{})
@@ -34,5 +34,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	gorm.Create(&user)
 
 	fmt.Fprintf(w, "Hello")
-	// fmt.Fprintf(w, strconv.Itoa(user.ID))
+	 */
 }
