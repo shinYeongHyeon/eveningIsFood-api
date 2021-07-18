@@ -5,11 +5,11 @@ services:
     container_name: eif-postgres
     image: postgres
     volumes:
-      - ./docker/data/postgres:/var/lib/postgresql/data
+      - ./docker/data/postgres-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=eif
-      - POSTGRES_USER=eifroot
-      - POSTGRES_PASSWORD=eifpassword!@
+      - POSTGRES_USER=eifrootuser
+      - POSTGRES_PASSWORD=eifpassword
       - POSTGRES_INITDB_ARGS=--encoding=UTF-8
     ports:
       - "5432:5432"
@@ -25,7 +25,7 @@ services:
       - ./:/app/
     environment:
       - POSTGRES_DB=eif
-      - POSTGRES_USER=eifroot
+      - POSTGRES_USER=eifrootuser
       - POSTGRES_PASSWORD=eifpassword
       - POSTGRES_HOST=eif-postgres
       - POSTGRES_PORT=5432
