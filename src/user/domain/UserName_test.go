@@ -1,8 +1,6 @@
 package user_domain
 
-import (
-	"testing"
-)
+import "testing"
 
 // TestCreateUserName Testing for UserName Create Successful
 func TestCreateUserName(t *testing.T) {
