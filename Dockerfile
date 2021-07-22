@@ -10,7 +10,8 @@ RUN apk update && \
     go get github.com/gorilla/mux &&
     go get github.com/labstack/gommon &&
     go get -u gorm.io/gorm &&
-    go get -u gorm.io/driver/postgres
+    go get -u gorm.io/driver/postgres &&
+    go get github.com/google/uuid
 
 # 9: HotReload
 

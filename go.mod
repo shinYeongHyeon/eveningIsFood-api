@@ -3,6 +3,7 @@ module github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi
 go 1.16
 
 require (
+	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/jackc/pgx/v4 v4.12.0 // indirect
 	github.com/labstack/gommon v0.3.0
