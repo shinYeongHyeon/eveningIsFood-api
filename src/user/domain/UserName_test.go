@@ -2,8 +2,8 @@ package user_domain
 
 import "testing"
 
-// TestCreateUserName Testing for UserName Create Successful
-func TestCreateUserName(t *testing.T) {
+// TestUserNameCreate Testing for UserName Create Successful
+func TestUserNameCreate(t *testing.T) {
 	userNameString := "Shin"
 	_, err := UserNameCreate(userNameString)
 
@@ -12,8 +12,8 @@ func TestCreateUserName(t *testing.T) {
 	}
 }
 
-// TestFailToCreateUserNameWhenUserNameStringIsEmpty Testing for UserName Create Fail When userNameString was Empty.
-func TestFailToCreateUserNameWhenUserNameStringIsEmpty(t *testing.T) {
+// TestFailToUserNameCreateWhenUserNameStringIsEmpty Testing for UserName Create Fail When userNameString was Empty.
+func TestFailToUserNameCreateWhenUserNameStringIsEmpty(t *testing.T) {
 	userNameString := ""
 	_, err := UserNameCreate(userNameString)
 
@@ -22,8 +22,8 @@ func TestFailToCreateUserNameWhenUserNameStringIsEmpty(t *testing.T) {
 	}
 }
 
-// TestFailToCreateUserNameUserNameLessThanThreeWord Testing for UserName Create Fail When userNameString length less than three word.
-func TestFailToCreateUserNameUserNameLessThanThreeWord(t *testing.T) {
+// TestFailToUserNameCreateUserNameLessThanThreeWord Testing for UserName Create Fail When userNameString length less than three word.
+func TestFailToUserNameCreateUserNameLessThanThreeWord(t *testing.T) {
 	userNameString := "ab"
 	userNameStringKoreanVer := "신영"
 	_, err := UserNameCreate(userNameString)

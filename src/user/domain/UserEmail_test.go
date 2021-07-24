@@ -2,8 +2,8 @@ package user_domain
 
 import "testing"
 
-// TestCreateUserEmail Testing for UserEmail Create Successful
-func TestCreateUserEmail(t *testing.T) {
+// TestUserEmailCreate Testing for UserEmail Create Successful
+func TestUserEmailCreate(t *testing.T) {
 	userEmailString := "den.shin.dev@gmail.com"
 	_, err := UserEmailCreate(userEmailString)
 
@@ -12,8 +12,8 @@ func TestCreateUserEmail(t *testing.T) {
 	}
 }
 
-// TestFailToCreateUserNameWhenUserEmailStringWasNotEmailForm Testing for UserEmail Create Fail When userEmailString was not email form.
-func TestFailToCreateUserNameWhenUserEmailStringWasNotEmailForm(t *testing.T) {
+// TestFailToUserEmailCreateWhenUserEmailStringWasNotEmailForm Testing for UserEmail Create Fail When userEmailString was not email form.
+func TestFailToUserEmailCreateWhenUserEmailStringWasNotEmailForm(t *testing.T) {
 	userEmailString := "a@b"
 	_, err := UserEmailCreate(userEmailString)
 

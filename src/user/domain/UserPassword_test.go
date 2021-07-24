@@ -2,8 +2,8 @@ package user_domain
 
 import "testing"
 
-// TestCreateUserPassword Testing for UserPassword Create Successful
-func TestCreateUserPassword(t *testing.T) {
+// TestUserPasswordCreate Testing for UserPassword Create Successful
+func TestUserPasswordCreate(t *testing.T) {
 	userPasswordString := "password"
 	_, err := UserPasswordCreate(userPasswordString)
 
@@ -12,8 +12,8 @@ func TestCreateUserPassword(t *testing.T) {
 	}
 }
 
-// TestFailToCreateUserPasswordWhenUserPasswordStringIsEmpty Testing for UserPassword Create Fail When userPasswordString was Empty.
-func TestFailToCreateUserPasswordWhenUserPasswordStringIsEmpty(t *testing.T) {
+// TestFailToUserPasswordCreateWhenUserPasswordStringIsEmpty Testing for UserPassword Create Fail When userPasswordString was Empty.
+func TestFailToUserPasswordCreateWhenUserPasswordStringIsEmpty(t *testing.T) {
 	userPasswordString := ""
 	_, err := UserPasswordCreate(userPasswordString)
 
@@ -22,8 +22,8 @@ func TestFailToCreateUserPasswordWhenUserPasswordStringIsEmpty(t *testing.T) {
 	}
 }
 
-// TestFailToCreateUserPasswordUserPasswordLessThanSixWord Testing for UserPassword Create Fail When userPasswordString length less than six word.
-func TestFailToCreateUserPasswordUserPasswordLessThanSixWord(t *testing.T) {
+// TestFailToUserPasswordCreateUserPasswordLessThanSixWord Testing for UserPassword Create Fail When userPasswordString length less than six word.
+func TestFailToUserPasswordCreateUserPasswordLessThanSixWord(t *testing.T) {
 	userPasswordString := "abdd"
 	userPasswordStringKoreanVer := "신영르르릅"
 	_, err := UserPasswordCreate(userPasswordString)
