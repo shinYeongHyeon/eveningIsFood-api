@@ -5,9 +5,9 @@ import "testing"
 // TestUserNameCreate Testing for UserName Create Successful
 func TestUserNameCreate(t *testing.T) {
 	userNameString := "Shin"
-	_, err := UserNameCreate(userNameString)
+	userName, err := UserNameCreate(userNameString)
 
-	if err != nil {
+	if err != nil || userName.Value != "Shin" {
 		t.Fatal("Fail to Create UserName")
 	}
 }

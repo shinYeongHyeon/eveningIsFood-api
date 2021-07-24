@@ -5,9 +5,9 @@ import "testing"
 // TestUserEmailCreate Testing for UserEmail Create Successful
 func TestUserEmailCreate(t *testing.T) {
 	userEmailString := "den.shin.dev@gmail.com"
-	_, err := UserEmailCreate(userEmailString)
+	userEmail, err := UserEmailCreate(userEmailString)
 
-	if err != nil {
+	if err != nil || userEmail.Value != "den.shin.dev@gmail.com" {
 		t.Fatal("Fail to Create UserEmail")
 	}
 }
