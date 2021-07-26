@@ -9,9 +9,9 @@ func TestNewUserCreate(t *testing.T) {
 		UserName:     UserName { "신영현" },
 		UserPassword: UserPassword { "password" },
 	}
-	_, err := NewUserCreate(userProps)
+	user, err := NewUserCreate(userProps)
 
-	if err != nil {
+	if err != nil || user.Email.Value != "den.shin.dev@gmail.com" {
 		t.Fatal("Fail to Create UserEmail")
 	}
 }

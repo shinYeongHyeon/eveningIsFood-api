@@ -1,13 +1,10 @@
 package user_domain
 
-import "time"
-
-type NewUser struct {
+type User struct {
 	Uuid string
 	Email UserEmail
 	Name UserName
 	Password UserPassword
-	CreatedAt time.Time
 }
 
 type NewUserProps struct {
@@ -16,6 +13,8 @@ type NewUserProps struct {
 	UserPassword UserPassword
 }
 
-func NewUserCreate(props NewUserProps) (NewUser, error) {
-	return NewUser{}, nil
+func NewUserCreate(props NewUserProps) (User, error) {
+	return User{
+		Email: props.UserEmail,
+	}, nil
 }
