@@ -17,5 +17,6 @@ func NewUserCreate(props NewUserProps) (User, error) {
 	return User{
 		Email: props.UserEmail,
 		Name: props.UserName,
+		Password: props.UserPassword,
 	}, nil
 }
