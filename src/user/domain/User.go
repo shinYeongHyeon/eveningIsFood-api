@@ -16,5 +16,6 @@ type NewUserProps struct {
 func NewUserCreate(props NewUserProps) (User, error) {
 	return User{
 		Email: props.UserEmail,
+		Name: props.UserName,
 	}, nil
 }
