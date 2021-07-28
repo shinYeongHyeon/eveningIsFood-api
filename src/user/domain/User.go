@@ -1,5 +1,9 @@
 package user_domain
 
+import (
+	core_domain "github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi/core/domain"
+)
+
 type User struct {
 	Uuid string
 	Email UserEmail
@@ -14,7 +18,8 @@ type NewUserProps struct {
 }
 
 func NewUserCreate(props NewUserProps) (User, error) {
-	return User{
+	return User {
+		Uuid: core_domain.CreateUuid(),
 		Email: props.UserEmail,
 		Name: props.UserName,
 		Password: props.UserPassword,
