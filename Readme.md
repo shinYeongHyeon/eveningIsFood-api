@@ -6,6 +6,7 @@
 -[x] Add UUID And Set New User (w/ UUid)
 -[ ] Create User
 -[ ] Add Jwt
+-[ ] Login User
 
 ---
 ## Test
