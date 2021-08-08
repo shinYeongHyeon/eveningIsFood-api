@@ -1,13 +1,15 @@
 package user_domain
 
-import "testing"
+import (
+	"testing"
+)
 
 // TestUserEmailCreate Testing for UserEmail Create Successful
 func TestUserEmailCreate(t *testing.T) {
 	userEmailString := "den.shin.dev@gmail.com"
 	userEmail, err := UserEmailCreate(userEmailString)
 
-	if err != nil || userEmail.Value != "den.shin.dev@gmail.com" {
+	if err != nil || userEmail.Value() != "den.shin.dev@gmail.com" {
 		t.Fatal("Fail to Create UserEmail")
 	}
 }
