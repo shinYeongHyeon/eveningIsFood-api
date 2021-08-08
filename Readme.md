@@ -1,12 +1,7 @@
 # Evening Is Food ! (API)
 
----
-
--[x] Gorm Entity Setting (w/ AutoMigration)  
--[x] Add UUID And Set New User (w/ UUid)  
--[ ] Create User  
--[ ] Add Jwt  
--[ ] Login User
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/shinYeongHyeon/eveningIsFood-api)  
+[![Go Report Card](https://goreportcard.com/badge/github.com/shinYeongHyeon/eveningIsFood-api)](https://goreportcard.com/report/github.com/shinYeongHyeon/eveningIsFood-api)  
 
 ---
 ## Test
