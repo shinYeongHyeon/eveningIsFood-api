@@ -1,4 +1,4 @@
-package user_domain
+package userdomain
 
 import (
 	core_domain "github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi/core/domain"
