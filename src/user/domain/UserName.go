@@ -7,7 +7,7 @@ import (
 
 // UserName structure
 type UserName struct {
-	Value string
+	value string
 }
 
 // UserNameCreate create UserName with userNameString
@@ -21,4 +21,8 @@ func UserNameCreate(userNameString string) (UserName, error) {
 	}
 
 	return UserName { userNameString }, nil
+}
+
+func (userName *UserName) Value() string {
+	return userName.value
 }

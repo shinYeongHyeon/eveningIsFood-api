@@ -7,7 +7,7 @@ func TestUserNameCreate(t *testing.T) {
 	userNameString := "Shin"
 	userName, err := UserNameCreate(userNameString)
 
-	if err != nil || userName.Value != "Shin" {
+	if err != nil || userName.Value() != "Shin" {
 		t.Fatal("Fail to Create UserName")
 	}
 }
