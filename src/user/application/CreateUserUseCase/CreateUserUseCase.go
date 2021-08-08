@@ -1,1 +1,1 @@
-package CreateUserUseCase
+package createuserusecase

@@ -23,6 +23,7 @@ func UserNameCreate(userNameString string) (UserName, error) {
 	return UserName{userNameString}, nil
 }
 
+// Value get value
 func (userName *UserName) Value() string {
 	return userName.value
 }

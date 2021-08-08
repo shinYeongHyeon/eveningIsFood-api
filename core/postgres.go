@@ -8,6 +8,7 @@ import (
 	"os"
 )
 
+// PostgresConnect connect to PostgreSQL
 func PostgresConnect() *gorm.DB {
 	var dsn = fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=5432 sslmode=disable TimeZone=Asia/Seoul",

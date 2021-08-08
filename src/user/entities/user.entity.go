@@ -1,7 +1,8 @@
-package user_entities
+package userentities
 
 import "time"
 
+// User entity
 type User struct {
 	UUID      string `gorm:"primaryKey"`
 	Email     string

@@ -19,6 +19,7 @@ func UserEmailCreate(userEmailString string) (*UserEmail, error) {
 	return &UserEmail{userEmailString}, nil
 }
 
+// Value get value
 func (userEmail *UserEmail) Value() string {
 	return userEmail.value
 }

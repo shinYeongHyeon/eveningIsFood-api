@@ -23,6 +23,7 @@ func UserPasswordCreate(userPasswordString string) (UserPassword, error) {
 	return UserPassword{userPasswordString}, nil
 }
 
+// Value get value
 func (userPassword *UserPassword) Value() string {
 	return userPassword.value
 }

@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Error struct for Error type
 type Error struct {
 	Message string
 	Status  int
