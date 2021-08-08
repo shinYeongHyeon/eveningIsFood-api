@@ -7,7 +7,7 @@ import (
 
 // UserPassword structure
 type UserPassword struct {
-	Value string
+	value string
 }
 
 // UserPasswordCreate create UserPassword with userPasswordString
@@ -21,4 +21,8 @@ func UserPasswordCreate(userPasswordString string) (UserPassword, error) {
 	}
 
 	return UserPassword { userPasswordString }, nil
+}
+
+func (userPassword *UserPassword) Value() string {
+	return userPassword.value
 }

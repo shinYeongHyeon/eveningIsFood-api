@@ -7,7 +7,7 @@ func TestUserPasswordCreate(t *testing.T) {
 	userPasswordString := "password"
 	userPassword, err := UserPasswordCreate(userPasswordString)
 
-	if err != nil || userPassword.Value != "password" {
+	if err != nil || userPassword.Value() != "password" {
 		t.Fatal("Fail to Create UserPassword")
 	}
 }
