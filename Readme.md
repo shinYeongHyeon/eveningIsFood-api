@@ -4,6 +4,11 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/shinYeongHyeon/eveningIsFood-api)](https://goreportcard.com/report/github.com/shinYeongHyeon/eveningIsFood-api)  
 
 ---
+## Formatting
+```shell
+gofmt -w src/*
+```
+
 ## Test
 ```shell
 go test ./...

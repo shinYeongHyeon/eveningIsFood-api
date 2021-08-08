@@ -1,8 +1,8 @@
 package user_domain
 
 import (
-"errors"
-"unicode/utf8"
+	"errors"
+	"unicode/utf8"
 )
 
 // UserPassword structure
@@ -20,7 +20,7 @@ func UserPasswordCreate(userPasswordString string) (UserPassword, error) {
 		return UserPassword{}, errors.New("userPasswordString Length Can Not Be Less Than 6")
 	}
 
-	return UserPassword { userPasswordString }, nil
+	return UserPassword{userPasswordString}, nil
 }
 
 func (userPassword *UserPassword) Value() string {

@@ -20,7 +20,7 @@ func UserNameCreate(userNameString string) (UserName, error) {
 		return UserName{}, errors.New("userNameString Length Can Not Be Less Than 3")
 	}
 
-	return UserName { userNameString }, nil
+	return UserName{userNameString}, nil
 }
 
 func (userName *UserName) Value() string {

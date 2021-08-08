@@ -16,7 +16,7 @@ func UserEmailCreate(userEmailString string) (*UserEmail, error) {
 		return &UserEmail{}, errors.New("userEmailString Must be email form")
 	}
 
-	return &UserEmail { userEmailString }, nil
+	return &UserEmail{userEmailString}, nil
 }
 
 func (userEmail *UserEmail) Value() string {

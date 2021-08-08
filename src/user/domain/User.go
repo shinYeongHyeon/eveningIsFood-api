@@ -5,23 +5,23 @@ import (
 )
 
 type User struct {
-	Uuid string
-	Email UserEmail
-	Name UserName
+	Uuid     string
+	Email    UserEmail
+	Name     UserName
 	Password UserPassword
 }
 
 type NewUserProps struct {
-	UserEmail UserEmail
-	UserName UserName
+	UserEmail    UserEmail
+	UserName     UserName
 	UserPassword UserPassword
 }
 
 func NewUserCreate(props NewUserProps) (User, error) {
-	return User {
-		Uuid: core_domain.CreateUuid(),
-		Email: props.UserEmail,
-		Name: props.UserName,
+	return User{
+		Uuid:     core_domain.CreateUuid(),
+		Email:    props.UserEmail,
+		Name:     props.UserName,
 		Password: props.UserPassword,
 	}, nil
 }

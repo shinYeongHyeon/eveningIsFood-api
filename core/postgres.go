@@ -15,7 +15,7 @@ func PostgresConnect() *gorm.DB {
 		os.Getenv("POSTGRES_USER"),
 		os.Getenv("POSTGRES_PASSWORD"),
 		os.Getenv("POSTGRES_DB"),
-		)
+	)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("Db Connect Error !")
@@ -23,5 +23,3 @@ func PostgresConnect() *gorm.DB {
 
 	return db
 }
-
-

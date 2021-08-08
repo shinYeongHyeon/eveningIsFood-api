@@ -8,7 +8,7 @@ import (
 
 type Error struct {
 	Message string
-	Status int
+	Status  int
 }
 
 // NotFoundHandler Handle 404
