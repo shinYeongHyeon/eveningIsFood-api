@@ -1,0 +1,8 @@
+### CREATE USER
+POST localhost:8686/users
+
+{
+    "name" : "신영현",
+    "password" : "qlalfqjsgh",
+    "email" :  "den.shin.dev@gmail.com"
+}

@@ -14,7 +14,7 @@ func ListenAndServe(address string, r *mux.Router) error {
 	migratePostgres()
 
 	http.Handle("/", core.LoggingMiddleware(r))
-	http.Handle("/user/", core.LoggingMiddleware(user.Module()))
+	http.Handle("/users", core.LoggingMiddleware(user.Module()))
 
 	return http.ListenAndServe(
 		address,
