@@ -1,4 +1,5 @@
 package createuserusecase
+
 import (
 	createuserusecasedto "github.com/shinYeongHyeon/eveningIsFood/eveningIsFoodApi/src/user/application/CreateUserUseCase/dto"
 	"testing"
@@ -7,8 +8,8 @@ import (
 // TestFailToCreateUserUseCase Testing for CreateUserUseCase Fail
 func TestFailToCreateUserUseCase(t *testing.T) {
 	isSuccess, err := Exec(createuserusecasedto.Request{
-		Email: "",
-		Name: "",
+		Email:    "",
+		Name:     "",
 		Password: "",
 	})
 
@@ -20,8 +21,8 @@ func TestFailToCreateUserUseCase(t *testing.T) {
 // TestCreateUserUseCase Testing for CreateUserUseCase Success
 func TestCreateUserUseCase(t *testing.T) {
 	isSuccess, err := Exec(createuserusecasedto.Request{
-		Email: "den.shin.dev@gmail.com",
-		Name: "신영현",
+		Email:    "den.shin.dev@gmail.com",
+		Name:     "신영현",
 		Password: "비밀번호123",
 	})
 

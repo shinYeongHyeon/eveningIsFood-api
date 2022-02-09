@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: eif-postgres
+    image: postgres
+    volumes:
+      - ./docker/data/postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=eif
+      - POSTGRES_USER=eifrootuser
+      - POSTGRES_PASSWORD=eifpassword
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8
+    ports:
+      - "5432:5432"
