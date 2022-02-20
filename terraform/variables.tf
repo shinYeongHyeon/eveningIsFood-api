@@ -5,9 +5,9 @@ variable "access_key" {
 }
 
 variable "secret_key" {
-  default     = ""
-  description = "AWS secret key ID"
-  type        = string
+  default = ""
+  description = "AWS secret key"
+  type = string
 }
 
 variable "region" {
@@ -19,11 +19,5 @@ variable "region" {
 variable "db_password" {
   default     = ""
   description = "Database password"
-  type        = string
-}
-
-variable "db_username" {
-  default     = ""
-  description = "Database username"
   type        = string
 }
