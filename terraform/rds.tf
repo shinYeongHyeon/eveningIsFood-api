@@ -1,5 +1,5 @@
-resource "aws_db_instance" "eif-dev" {
-  identifier                = "eif-dev"
+resource "aws_db_instance" "eif_dev" {
+  identifier                = "eif-rds-dev"
   allocated_storage         = 100
   engine                    = "mysql"
   engine_version            = "8.0.28"
@@ -10,5 +10,7 @@ resource "aws_db_instance" "eif-dev" {
   parameter_group_name      = "default.mysql8.0"
   apply_immediately         = true
   publicly_accessible       = true
-  final_snapshot_identifier = "eif-dev-final-snapshot"
+  final_snapshot_identifier = "eif-rds-dev-final-snapshot"
+  db_subnet_group_name      = module.vpc.database_subnet_group_name
+  vpc_security_group_ids    = [aws_security_group.dev_rds.id]
 }
