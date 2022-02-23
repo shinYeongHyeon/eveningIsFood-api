@@ -16,8 +16,14 @@ variable "region" {
   type        = string
 }
 
+variable "db_username" {
+  default     = ""
+  description = "Database password provided by tfc"
+  type        = string
+}
+
 variable "db_password" {
   default     = ""
-  description = "Database password"
+  description = "Database password provided by tfc"
   type        = string
 }
