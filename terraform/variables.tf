@@ -45,7 +45,10 @@ variable "availability_zones" {
 
 variable "allow_cidrs" {
   default = [
-    "125.178.212.149/32"
+    "125.178.212.149/32", // Den Home
+    "49.166.222.94/32", // Steve Home
+    "192.168.200.140/32", // Ash Home
+    "58.72.1.130/32" // TeamO2
   ]
   description = "A list of CIDR to access as internal"
   type        = list(string)

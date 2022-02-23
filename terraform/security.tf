@@ -31,7 +31,7 @@ resource "aws_security_group" "dev_web" {
     from_port    = 22
     to_port      = 22
     protocol     = "tcp"
-    cidr_blocks  = ["0.0.0.0/0"]
+    cidr_blocks  = var.allow_cidrs
   }
 
   ingress {
@@ -65,7 +65,7 @@ resource "aws_security_group" "dev_rds" {
     from_port    = 3306
     to_port      = 3306
     protocol     = "tcp"
-    cidr_blocks  = ["0.0.0.0/0"]
+    cidr_blocks  = var.allow_cidrs
   }
 
   egress {
