@@ -1,11 +1,17 @@
 package main
 
-import "net/http"
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/shinYeongHyeon/eveningIsFoodApi/src"
+	"log"
+)
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		w.Write([]byte("Hello EIF Team !"))
+	app := fiber.New(fiber.Config{
+		AppName: "Evening is Food API v0.0.1",
 	})
 
-	http.ListenAndServe(":9999", nil)
+	app.Mount("/", mainModule.CreateModule())
+
+	log.Fatal(app.Listen(":9999"))
 }
