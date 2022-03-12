@@ -11,11 +11,11 @@ See also : {이슈번호} (참고 이슈, 생략가능)
 
 ### For example,
 ```markdown
-FEAT: (CARM-1234) 유저 이름 변경
+FEAT: (EIF-T-1234) 유저 이름 변경
 
 유저 이름변경 Application 생성
 
-See also: (CARM-1233)
+See also: (EIF-I-1233)
 ```
 
 ## 커밋 TYPE 유형

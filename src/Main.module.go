@@ -3,6 +3,7 @@ package mainModule
 import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
+	foodCardModule "github.com/shinYeongHyeon/eveningIsFoodApi/src/foodCard"
 	userModule "github.com/shinYeongHyeon/eveningIsFoodApi/src/user"
 )
 
@@ -11,6 +12,7 @@ func CreateModule() *fiber.App {
 	mainModule := fiber.New()
 
 	mainModule.Mount("/user", userModule.CreateModule())
+	mainModule.Mount("/foodCard", foodCardModule.CreateModule())
 
 	// TODO: Error to 404
 	mainModule.Get("/*", func(c *fiber.Ctx) error {
