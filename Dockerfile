@@ -6,7 +6,8 @@ WORKDIR /app
 RUN apk update && \
     apk add git && \
     go get github.com/cespare/reflex && \
-    go get github.com/gofiber/fiber/v2
+    go get github.com/gofiber/fiber/v2 && \
+    go get github.com/google/uuid
 
 # 8 Line: Hot-reload
 # 9 Line: Web Framework "fiber"
