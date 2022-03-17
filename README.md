@@ -38,3 +38,13 @@ $ docker-compose up {{-d}}
 
 ### 옵션 설명
 > -d: 백그라운드에서 실행
+
+### Formatting
+```shell
+gofmt -w src/*
+```
+
+### Test
+```shell
+go test ./...
+```

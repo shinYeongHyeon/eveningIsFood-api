@@ -1,16 +1,13 @@
 #Dockerfile
-FROM golang:1.17-alpine
+FROM golang:1.18-alpine
 
 WORKDIR /app
 
 RUN apk update && \
     apk add git && \
-    go get github.com/cespare/reflex && \
-    go get github.com/gofiber/fiber/v2 && \
-    go get github.com/google/uuid
+    go install github.com/cespare/reflex@latest
 
 # 8 Line: Hot-reload
-# 9 Line: Web Framework "fiber"
 
 EXPOSE 9999
 CMD ["reflex", "-c", "reflex.conf"]
