@@ -4,9 +4,9 @@ import coreUuid "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/uuid
 
 // FoodCard is domain type definition.
 type FoodCard struct {
-	Uuid    string
-	Name    Name
-	Address Address
+	uuid    string
+	name    Name
+	address Address
 }
 
 // NewFoodCardProps is a struct for creating a new FoodCard domain.
@@ -18,23 +18,23 @@ type NewFoodCardProps struct {
 // CreateNewFoodCard creates a new FoodCard domain.
 func CreateNewFoodCard(props NewFoodCardProps) (FoodCard, error) {
 	return FoodCard{
-		Uuid:    coreUuid.CreateUuid(),
-		Name:    props.Name,
-		Address: props.Address,
+		uuid:    coreUuid.CreateUuid(),
+		name:    props.Name,
+		address: props.Address,
 	}, nil
 }
 
 // GetUuid returns the Uuid.
 func (foodCard FoodCard) GetUuid() string {
-	return foodCard.Uuid
+	return foodCard.uuid
 }
 
 // GetName returns the Name domain.
 func (foodCard FoodCard) GetName() Name {
-	return foodCard.Name
+	return foodCard.name
 }
 
 // GetAddress returns the Address domain.
 func (foodCard FoodCard) GetAddress() Address {
-	return foodCard.Address
+	return foodCard.address
 }
