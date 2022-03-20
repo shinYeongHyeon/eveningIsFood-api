@@ -33,10 +33,12 @@ CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같
 
 ## 서버 실행
 ```markdown
+$ docker-compose -f docker-compose-db.yml up {{-d}}
 $ docker-compose up {{-d}}
 ```
 
 ### 옵션 설명
+> -f: 기본 docker-compose 파일 말고 실행하기 위함
 > -d: 백그라운드에서 실행
 
 ### Formatting

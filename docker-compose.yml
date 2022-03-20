@@ -10,3 +10,9 @@ services:
       - "9999:9999"
     volumes:
       - ./:/app/
+    environment:
+      - POSTGRES_DB=evening-is-food
+      - POSTGRES_USER=eifroot
+      - POSTGRES_PASSWORD=eifrootpwd
+      - POSTGRES_HOST=eif-postgres
+      - POSTGRES_PORT=5432
