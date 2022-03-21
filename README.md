@@ -1,4 +1,5 @@
 # Evening Is Food ! (API)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/shinYeongHyeon/eveningIsFood-api)
 
 ## 커밋 규칙
 ```markdown
