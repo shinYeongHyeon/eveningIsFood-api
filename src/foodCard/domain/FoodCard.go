@@ -1,6 +1,6 @@
 package foodCardDomain
 
-import coreUuid "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/uuid"
+import coreUuid "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/uuid"
 
 // FoodCard is domain type definition.
 type FoodCard struct {

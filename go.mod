@@ -1,4 +1,4 @@
-module github.com/shinYeongHyeon/eveningIsFoodApi
+module github.com/shinYeongHyeon/eveningIsFood-api
 
 go 1.18
 

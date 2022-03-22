@@ -3,8 +3,8 @@ package foodCardModule
 import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	foodCardEntity "github.com/shinYeongHyeon/eveningIsFoodApi/src/foodCard/entities"
-	corePostgres "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/postgres"
+	foodCardEntity "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/entities"
+	corePostgres "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/postgres"
 	"log"
 )
 

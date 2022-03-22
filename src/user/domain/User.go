@@ -1,6 +1,6 @@
 package userDomain
 
-import coreUuid "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/uuid"
+import coreUuid "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/uuid"
 
 // User is domain type definition.
 type User struct {

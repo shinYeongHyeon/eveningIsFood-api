@@ -2,9 +2,9 @@ package mainModule
 
 import (
 	"github.com/gofiber/fiber/v2"
-	foodCardModule "github.com/shinYeongHyeon/eveningIsFoodApi/src/foodCard"
-	healthModule "github.com/shinYeongHyeon/eveningIsFoodApi/src/health"
-	userModule "github.com/shinYeongHyeon/eveningIsFoodApi/src/user"
+	foodCardModule "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard"
+	healthModule "github.com/shinYeongHyeon/eveningIsFood-api/src/health"
+	userModule "github.com/shinYeongHyeon/eveningIsFood-api/src/user"
 )
 
 // CreateModule is returned fiber.App for mounting
