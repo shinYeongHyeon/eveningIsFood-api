@@ -34,7 +34,7 @@ CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같
 
 ## 서버 실행
 ```markdown
-$ docker-compose -f docker-compose-db.yml up {{-d}}
+$ docker-compose -f docker-compose-db.yml up {{-d}}  
 $ docker-compose up {{-d}}
 ```
 

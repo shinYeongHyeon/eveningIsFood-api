@@ -1,9 +1,9 @@
 package foodCardRepository
 
 import (
-	foodCardDomain "github.com/shinYeongHyeon/eveningIsFoodApi/src/foodCard/domain"
-	foodCardEntity "github.com/shinYeongHyeon/eveningIsFoodApi/src/foodCard/entities"
-	corePostgres "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/postgres"
+	foodCardDomain "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/domain"
+	foodCardEntity "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/entities"
+	corePostgres "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/postgres"
 	"gorm.io/gorm"
 	"log"
 )

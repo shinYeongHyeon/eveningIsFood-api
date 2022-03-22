@@ -5,8 +5,8 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	corePostgres "github.com/shinYeongHyeon/eveningIsFoodApi/src/shared/core/postgres"
-	userEntity "github.com/shinYeongHyeon/eveningIsFoodApi/src/user/entities"
+	corePostgres "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/postgres"
+	userEntity "github.com/shinYeongHyeon/eveningIsFood-api/src/user/entities"
 )
 
 // CreateModule : returned fiber.App for UserModule mounting

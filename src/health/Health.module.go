@@ -2,7 +2,7 @@ package healthModule
 
 import (
 	"github.com/gofiber/fiber/v2"
-	healthControllerCommand "github.com/shinYeongHyeon/eveningIsFoodApi/src/health/controller/command"
+	healthControllerCommand "github.com/shinYeongHyeon/eveningIsFood-api/src/health/controller/command"
 )
 
 // CreateModule : returned fiber.App for HealthModule mounting
