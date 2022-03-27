@@ -1,4 +1,4 @@
-package healthControllerCommand
+package healthControllerQuery
 
 import (
 	"github.com/gofiber/fiber/v2"

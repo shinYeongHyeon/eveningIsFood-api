@@ -1,8 +1,8 @@
 package foodCardModule
 
 import (
-	"fmt"
 	"github.com/gofiber/fiber/v2"
+	foodCardCommandController "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/controller/command"
 	foodCardEntity "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/entities"
 	corePostgres "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/postgres"
 	"log"
@@ -10,16 +10,13 @@ import (
 
 // CreateModule : returned fiber.App for foodCardModule mounting
 func CreateModule() *fiber.App {
-	userModule := fiber.New()
-
-	userModule.Get("/*", func(c *fiber.Ctx) error {
-		msg := fmt.Sprintf("✋ %s, in FoodCard Module", c.Params("*"))
-		return c.SendString(msg)
-	})
+	foodCardModule := fiber.New()
 
 	migrate()
 
-	return userModule
+	foodCardModule.Post("/", foodCardCommandController.Create)
+
+	return foodCardModule
 }
 
 func migrate() {
