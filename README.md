@@ -51,5 +51,8 @@ gofmt -w src/*
 
 ### Test
 ```shell
-go test ./...
+TESTING=true go test ./...
 ```
+
+### TODO
+-[ ] Test 환경 및 Mocking 개선  

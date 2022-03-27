@@ -1,6 +1,7 @@
 package testFoodCardRepository
 
 import (
+	"errors"
 	foodCardDomain "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/domain"
 	"log"
 )
@@ -13,6 +14,7 @@ type TestFoodCardRepository struct {
 }
 
 var testFoodCardRepository *TestFoodCardRepository
+var wantCreateFail bool
 
 func init() {
 	log.Println("TestFoodCardRepository init")
@@ -20,11 +22,16 @@ func init() {
 }
 
 // GetRepository : [test] Get foodCardRepository
-func GetRepository() *TestFoodCardRepository {
+func GetRepository(isCreateFail bool) *TestFoodCardRepository {
+	wantCreateFail = isCreateFail
 	return testFoodCardRepository
 }
 
 // Create : [test] create FoodCard Row
 func (foodCardRepository *TestFoodCardRepository) Create(_ foodCardDomain.FoodCard) error {
+	if wantCreateFail {
+		return errors.New("error occur")
+	}
+
 	return nil
 }

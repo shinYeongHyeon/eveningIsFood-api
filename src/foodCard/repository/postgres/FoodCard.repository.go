@@ -6,6 +6,7 @@ import (
 	corePostgres "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/postgres"
 	"gorm.io/gorm"
 	"log"
+	"os"
 )
 
 // FoodCardRepository : struct for foodCardRepository
@@ -17,6 +18,11 @@ var foodCardRepository *FoodCardRepository
 
 func init() {
 	log.Println("FoodCardRepository init")
+
+	if os.Getenv("TESTING") == "true" {
+		return
+	}
+
 	foodCardRepository = &FoodCardRepository{corePostgres.GetManager().Db.Table("food_cards")}
 }
 
