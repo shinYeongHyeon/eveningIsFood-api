@@ -1,10 +1,13 @@
 package foodCardDomain
 
-import "testing"
+import (
+	"github.com/bxcodec/faker/v3"
+	"testing"
+)
 
 func TestNewFoodCardCreate(t *testing.T) {
-	nameString := "초원"
-	addressString := "서울특별시 강남구 테헤란로2길 21"
+	nameString := faker.Name()
+	addressString := faker.Sentence()
 
 	foodCardProps := NewFoodCardProps{
 		Name:    Name{nameString},

@@ -1,9 +1,12 @@
 package foodCardDomain
 
-import "testing"
+import (
+	"github.com/bxcodec/faker/v3"
+	"testing"
+)
 
 func TestNameCreate(t *testing.T) {
-	nameString := "초원"
+	nameString := faker.Name()
 	name, err := CreateName(nameString)
 
 	if err != nil || name.Value() != nameString {

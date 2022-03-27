@@ -1,9 +1,12 @@
 package foodCardDomain
 
-import "testing"
+import (
+	"github.com/bxcodec/faker/v3"
+	"testing"
+)
 
 func TestAddressCreate(t *testing.T) {
-	addressString := "서울특별시 강남구 테헤란로2길 21"
+	addressString := faker.Sentence()
 	address, err := CreateAddress(addressString)
 
 	if err != nil || address.Value() != addressString {
