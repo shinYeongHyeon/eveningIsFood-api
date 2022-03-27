@@ -1,4 +1,4 @@
-package foodCardRepository
+package postgresFoodCardRepository
 
 import (
 	foodCardDomain "github.com/shinYeongHyeon/eveningIsFood-api/src/foodCard/domain"
@@ -9,7 +9,6 @@ import (
 )
 
 // FoodCardRepository : struct for foodCardRepository
-// TODO: generic 만들고, 모킹 파일 만들어서 테스트시에 그것 활용해보는 것 리서치/Create 호출자도 수정해야 함
 type FoodCardRepository struct {
 	Repository *gorm.DB
 }
