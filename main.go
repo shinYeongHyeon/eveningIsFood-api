@@ -17,7 +17,7 @@ import (
 // @Host eveningisfood.com
 func main() {
 	app := fiber.New(fiber.Config{
-		AppName: "Evening is Food API 0",
+		AppName: "Evening is FoodShopCard API 0",
 	})
 
 	app.Get("/docs/*", swagger.HandlerDefault)

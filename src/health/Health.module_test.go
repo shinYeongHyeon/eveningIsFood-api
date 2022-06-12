@@ -22,7 +22,7 @@ func TestGetVersion(t *testing.T) {
 
 	body, _ := ioutil.ReadAll(response.Body)
 
-	if string(body) != "go1.18" {
-		t.Fatalf("Current version is go1.18")
+	if string(body) != "go1.18.3" {
+		t.Fatalf("Current version is go1.18.3")
 	}
 }

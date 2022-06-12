@@ -1,7 +1,7 @@
-package foodCardEntity
+package foodShopCardEntity
 
-// FoodCardEntity : Entity of foodCard
-type FoodCardEntity struct {
+// FoodShopCardEntity : Entity of foodShopCard
+type FoodShopCardEntity struct {
 	UUID      string `gorm:"primaryKey"`
 	Name      string `gorm:"not_null"`
 	Address   string `gorm:"not_null"`

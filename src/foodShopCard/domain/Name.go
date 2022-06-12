@@ -1,4 +1,4 @@
-package foodCardDomain
+package foodShopCardDomain
 
 import "errors"
 

@@ -1,5 +1,5 @@
 #Dockerfile
-FROM golang:1.18-alpine
+FROM golang:1.18.3-alpine
 
 WORKDIR /app
 

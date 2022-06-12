@@ -1,5 +1,5 @@
 definitions:
-  foodCardControllerCommandDto.CreateRequest:
+  foodShopCardControllerCommandDto.CreateRequest:
     properties:
       address:
         description: 음식점 주소
@@ -10,22 +10,22 @@ definitions:
         example: 초원
         type: string
     type: object
-  foodCardControllerCommandDto.CreateResponse:
+  foodShopCardControllerCommandDto.CreateResponse:
     properties:
       code:
         example: SUCCESS
         type: string
-      foodCard:
-        $ref: '#/definitions/foodCardControllerCommandDto.FoodCard'
+      foodShopCard:
+        $ref: '#/definitions/foodShopCardControllerCommandDto.FoodShopCard'
     type: object
-  foodCardControllerCommandDto.CreateResponseError:
+  foodShopCardControllerCommandDto.CreateResponseError:
     properties:
       code:
         type: string
       errorMessage:
         type: string
     type: object
-  foodCardControllerCommandDto.FoodCard:
+  foodShopCardControllerCommandDto.FoodShopCard:
     properties:
       address:
         description: 음식점 주소
@@ -46,7 +46,7 @@ info:
   title: EveningIsFood API
   version: "0"
 paths:
-  /foodCard:
+  /foodShopCard:
     post:
       consumes:
       - application/json
@@ -54,25 +54,25 @@ paths:
       parameters:
       - description: 음식점카드 생성 Request Body
         in: body
-        name: foodCard
+        name: foodShopCard
         required: true
         schema:
-          $ref: '#/definitions/foodCardControllerCommandDto.CreateRequest'
+          $ref: '#/definitions/foodShopCardControllerCommandDto.CreateRequest'
       produces:
       - application/json
       responses:
         "200":
           description: 음식점카드 생성 Response
           schema:
-            $ref: '#/definitions/foodCardControllerCommandDto.CreateResponse'
+            $ref: '#/definitions/foodShopCardControllerCommandDto.CreateResponse'
         "400":
           description: Bad Request
           schema:
-            $ref: '#/definitions/foodCardControllerCommandDto.CreateResponseError'
+            $ref: '#/definitions/foodShopCardControllerCommandDto.CreateResponseError'
         "500":
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/foodCardControllerCommandDto.CreateResponseError'
+            $ref: '#/definitions/foodShopCardControllerCommandDto.CreateResponseError'
       summary: 음식점카드 생성
       tags:
       - foodShopCard

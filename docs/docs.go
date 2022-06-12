@@ -19,7 +19,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/foodCard": {
+        "/foodShopCard": {
             "post": {
                 "description": "음식점카드를 생성하는 API",
                 "consumes": [
@@ -35,11 +35,11 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "description": "음식점카드 생성 Request Body",
-                        "name": "foodCard",
+                        "name": "foodShopCard",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/foodCardControllerCommandDto.CreateRequest"
+                            "$ref": "#/definitions/foodShopCardControllerCommandDto.CreateRequest"
                         }
                     }
                 ],
@@ -47,19 +47,19 @@ const docTemplate = `{
                     "200": {
                         "description": "음식점카드 생성 Response",
                         "schema": {
-                            "$ref": "#/definitions/foodCardControllerCommandDto.CreateResponse"
+                            "$ref": "#/definitions/foodShopCardControllerCommandDto.CreateResponse"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/foodCardControllerCommandDto.CreateResponseError"
+                            "$ref": "#/definitions/foodShopCardControllerCommandDto.CreateResponseError"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/foodCardControllerCommandDto.CreateResponseError"
+                            "$ref": "#/definitions/foodShopCardControllerCommandDto.CreateResponseError"
                         }
                     }
                 }
@@ -67,7 +67,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "foodCardControllerCommandDto.CreateRequest": {
+        "foodShopCardControllerCommandDto.CreateRequest": {
             "type": "object",
             "properties": {
                 "address": {
@@ -82,19 +82,19 @@ const docTemplate = `{
                 }
             }
         },
-        "foodCardControllerCommandDto.CreateResponse": {
+        "foodShopCardControllerCommandDto.CreateResponse": {
             "type": "object",
             "properties": {
                 "code": {
                     "type": "string",
                     "example": "SUCCESS"
                 },
-                "foodCard": {
-                    "$ref": "#/definitions/foodCardControllerCommandDto.FoodCard"
+                "foodShopCard": {
+                    "$ref": "#/definitions/foodShopCardControllerCommandDto.FoodShopCard"
                 }
             }
         },
-        "foodCardControllerCommandDto.CreateResponseError": {
+        "foodShopCardControllerCommandDto.CreateResponseError": {
             "type": "object",
             "properties": {
                 "code": {
@@ -105,7 +105,7 @@ const docTemplate = `{
                 }
             }
         },
-        "foodCardControllerCommandDto.FoodCard": {
+        "foodShopCardControllerCommandDto.FoodShopCard": {
             "type": "object",
             "properties": {
                 "address": {

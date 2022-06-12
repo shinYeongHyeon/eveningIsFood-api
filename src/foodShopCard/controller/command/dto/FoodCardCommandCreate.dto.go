@@ -1,6 +1,6 @@
-package foodCardControllerCommandDto
+package foodShopCardControllerCommandDto
 
-// CreateRequest : Request for create foodCard
+// CreateRequest : Request for create foodShopCard
 type CreateRequest struct {
 	// 음식점 이름
 	Name string `json:"name" example:"초원"`
@@ -8,8 +8,8 @@ type CreateRequest struct {
 	Address string `json:"address" example:"서울특별시 용산구 남영동 80-4"`
 }
 
-// FoodCard : FoodCard object for protocol
-type FoodCard struct {
+// FoodShopCard : FoodShopCard object for protocol
+type FoodShopCard struct {
 	// 음식점 고유 ID
 	Uuid string `json:"uuid"`
 	// 음식점 이름
@@ -20,8 +20,8 @@ type FoodCard struct {
 
 // CreateResponse : Response for Create
 type CreateResponse struct {
-	Code     string   `json:"code" example:"SUCCESS"`
-	FoodCard FoodCard `json:"foodCard"`
+	Code         string       `json:"code" example:"SUCCESS"`
+	FoodShopCard FoodShopCard `json:"foodShopCard"`
 }
 
 // CreateResponseError : Response for Create
