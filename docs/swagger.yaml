@@ -1,0 +1,10 @@
+host: eveningisfood.com
+info:
+  contact:
+    email: eveningisfood@gmail.com
+    name: EveningIsFood
+  description: 예로부터 약속은 저녁에 이루어 졌고, 역사는 술 속에서 만들어졌습니다.
+  title: EveningIsFood API
+  version: "0"
+paths: {}
+swagger: "2.0"

@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "예로부터 약속은 저녁에 이루어 졌고, 역사는 술 속에서 만들어졌습니다.",
+        "title": "EveningIsFood API",
+        "contact": {
+            "name": "EveningIsFood",
+            "email": "eveningisfood@gmail.com"
+        },
+        "version": "0"
+    },
+    "host": "eveningisfood.com",
+    "paths": {}
+}
