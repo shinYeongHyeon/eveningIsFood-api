@@ -10,6 +10,17 @@ import (
 	coreUseCaseResponseCode "github.com/shinYeongHyeon/eveningIsFood-api/src/shared/core/useCase"
 )
 
+// Create : Create New foodCard
+// @Summary      음식점카드 생성
+// @Description  음식점카드를 생성하는 API
+// @Tags         foodShopCard
+// @Accept       json
+// @Produce      json
+// @Param        foodCard body     foodCardControllerCommandDto.CreateRequest       true "음식점카드 생성 Request Body"
+// @Success      200      {object} foodCardControllerCommandDto.CreateResponse      "음식점카드 생성 Response"
+// @Failure      400      {object} foodCardControllerCommandDto.CreateResponseError
+// @Failure      500      {object} foodCardControllerCommandDto.CreateResponseError
+// @Router       /foodCard [post]
 func Create(context *fiber.Ctx) error {
 	request := new(foodCardControllerCommandDto.CreateRequest)
 
@@ -33,7 +44,10 @@ func Create(context *fiber.Ctx) error {
 	)
 
 	if createFoodCardUseCaseResponse.Code != coreUseCaseResponseCode.SUCCESS {
-		return context.Status(fiber.StatusInternalServerError).JSON(foodCardControllerCommandDto.CreateResponse{Code: "FAILED"})
+		return context.Status(fiber.StatusInternalServerError).JSON(foodCardControllerCommandDto.CreateResponseError{
+			Code:         "FAILED",
+			ErrorMessage: "Failed to create foodCard.",
+		})
 	}
 
 	foodCard := createFoodCardUseCaseResponse.FoodCard

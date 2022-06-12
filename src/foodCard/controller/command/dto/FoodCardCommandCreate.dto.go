@@ -2,15 +2,20 @@ package foodCardControllerCommandDto
 
 // CreateRequest : Request for create foodCard
 type CreateRequest struct {
-	Name    string `json:"name"`
-	Address string `json:"address"`
+	// 음식점 이름
+	Name string `json:"name" example:"초원"`
+	// 음식점 주소
+	Address string `json:"address" example:"서울특별시 용산구 남영동 80-4"`
 }
 
 // FoodCard : FoodCard object for protocol
 type FoodCard struct {
-	Uuid    string `json:"string"`
-	Name    string `json:"Name"`
-	Address string `json:"Address"`
+	// 음식점 고유 ID
+	Uuid string `json:"uuid"`
+	// 음식점 이름
+	Name string `json:"name"`
+	// 음식점 주소
+	Address string `json:"address"`
 }
 
 // CreateResponse : Response for Create

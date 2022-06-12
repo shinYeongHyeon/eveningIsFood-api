@@ -8,13 +8,13 @@ import (
 	"log"
 )
 
-// @title EveningIsFood API
-// @version 0
-// @description 예로부터 약속은 저녁에 이루어 졌고, 역사는 술 속에서 만들어졌습니다.
-// @termsOfService
-// @contact.name EveningIsFood
-// @contact.email eveningisfood@gmail.com
-// @host eveningisfood.com
+// @Title EveningIsFood API
+// @Version 0
+// @Description 예로부터 약속은 저녁에 이루어 졌고, 역사는 술 속에서 만들어졌습니다.
+// @TermsOfService
+// @Contact.name EveningIsFood
+// @Contact.email eveningisfood@gmail.com
+// @Host eveningisfood.com
 func main() {
 	app := fiber.New(fiber.Config{
 		AppName: "Evening is Food API 0",
